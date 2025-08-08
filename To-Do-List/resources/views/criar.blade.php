@@ -11,11 +11,11 @@
 </header>
 <body>
     <div>
-        <form action="" method="POST">
+        <form action="/criar" method="POST">
             @csrf
-            <input type="text" placeholder="Nome">
-            <input type="text" placeholder="Descrição">
-            <input type="date" placeholder="Vencimento">
+            <input name="nome" type="text" placeholder="Nome">
+            <input name="descricao" type="text" placeholder="Descrição">
+            <input name="vencimento" type="date" placeholder="Vencimento">
             <button>Criar</button>
         </form>
     </div>
