@@ -21,8 +21,8 @@ class TarefaController extends Controller
     
     public function criarTarefa(Request $request) { 
         $dadosCriar = $request->validate([
-            'nome' => 'required',
-            'descricao',
+            'titulo' => 'required',
+            'descrição' => 'required',
             'vencimento' => 'required'
         ]);
 

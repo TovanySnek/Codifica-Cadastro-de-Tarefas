@@ -17,11 +17,13 @@
         </div>
             @foreach($tarefas as $tarefa)
 
-                <h3>{{$tarefa['titulo']}}Estudar PHP</h3>   
-                <h3>{{$tarefa['vencimento']}}25/07/2032</h3>
-                <h3>{{$tarefa['status']}}Pendente</h3>
-                <h3>{{$tarefa['descricao']}}Descrição</h3>
-                <form action="/concluir-post/{{$post->id}}" method="POST">@csrf <button>Feito</button> <button href="/editar-tarefa/{{$tarefa->id}}">Editar</button> <form action="/delete-post/{{$post->id}}" method="POST">@csrf @method('DELETE')<button>Deletar</button></form>
+                <h3>{{$tarefa['titulo']}}</h3>   
+                <h3>{{$tarefa['vencimento']}}</h3>
+                <h3>{{$tarefa['status']}}</h3>
+                <h3>{{$tarefa['descrição']}}</h3>
+                <form action="/concluir-tarefa/{{$tarefa->id}}" method="POST">@csrf <button>Feito</button></form> 
+                <button href="/editar-tarefa/{{$tarefa->id}}">Editar</button> 
+                <form action="/delete-post/{{$tarefa->id}}" method="POST">@csrf @method('DELETE')<button>Deletar</button></form>
 
             @endforeach
         <div>
