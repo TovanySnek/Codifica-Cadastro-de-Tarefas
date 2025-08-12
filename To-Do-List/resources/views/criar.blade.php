@@ -11,12 +11,12 @@
 </header>
 <body>
     <div>
-        <form action="/criar" method="POST">
+        <form action="{{ route('/criar-tarefa') }}" method="POST">
             @csrf
             <input name="nome" type="text" placeholder="Nome">
             <input name="descricao" type="text" placeholder="Descrição">
             <input name="vencimento" type="date" placeholder="Vencimento">
-            <button>Criar</button>
+            <button type="submit">Criar</button> 
         </form>
     </div>
 </body>
