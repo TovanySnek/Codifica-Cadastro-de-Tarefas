@@ -15,8 +15,8 @@ class TarefaController extends Controller
     
     public function telaEditar(Tarefa $tarefa) 
     { 
-
-    return view('editar', ['tarefa' => $tarefa]); 
+    $status = ['Pendente','Concluido'];
+    return view('editar', compact('status') , ['tarefa' => $tarefa]); 
     } 
     
     public function criarTarefa(Request $request) { 
@@ -30,28 +30,34 @@ class TarefaController extends Controller
         return redirect('/');
     }
 
-    public function listarTarefa(){
+    public function atualizarTarefa(Tarefa $tarefa, Request $request){
 
-    
-    }
+        $dadosAtualizar = $request->validate([
+            'titulo' => 'required',
+            'descrição' => 'required',
+            'vencimento' => 'required',
+            'status' => 'required'
+        ]);
 
-    public function buscarTarefa(){
-
-    
-    }
-
-    public function atualizarTarefa(){
-
-    
-    }
-
-    public function deletarTarefa(){
-
-    
-    }
-
-    public function concluirTarefa(){
-
+        $tarefa->update($dadosAtualizar);
         return redirect('/');
     }
+
+    public function deletarTarefa(Tarefa $tarefa){
+
+        $tarefa->delete();
+        return redirect('/');
+
+    }
+
+    public function pesquisarTarefa(Request $request){
+
+        $pesquisa = $request->pesquisar;
+
+        $tarefas = Tarefa::where('titulo','LIKE','%'.$pesquisa.'%')->get();
+    
+        return view('home',compact('tarefas'));
+
+    }
+
 }

@@ -13,18 +13,20 @@
 
         <div>
             <h2>Busca por Titulo</h2>
+            <form action="{{url('pesquisa')}}" method="GET">
+                <input type="search" name="pesquisar" placeholder="     ">
+                <input type="submit" Value="Pesquisar">
+            </form>
 
         </div>
             @foreach($tarefas as $tarefa)
-
-                <h3>{{$tarefa['titulo']}}</h3>   
-                <h3>{{$tarefa['vencimento']}}</h3>
-                <h3>{{$tarefa['status']}}</h3>
-                <h3>{{$tarefa['descrição']}}</h3>
-                <form action="/concluir-tarefa/{{$tarefa->id}}" method="POST">@csrf <button>Feito</button></form> 
-                <button href="/editar-tarefa/{{$tarefa->id}}">Editar</button> 
-                <form action="/delete-post/{{$tarefa->id}}" method="POST">@csrf @method('DELETE')<button>Deletar</button></form>
-
+                <div>  
+                    <h3>Titulo:   {{$tarefa['titulo']}} Vencimento:   {{$tarefa['vencimento']}} Status:   {{$tarefa['status']}}</h3>
+                </div>   
+                <div>
+                    {{$tarefa['descrição']}}
+                </div>
+                <a href="/editar-tarefa/{{$tarefa->id}}">Editar</a> <form action="/deletar/{{$tarefa->id}}" method="POST">@csrf @method('DELETE')<button>Deletar</button></form> 
             @endforeach
         <div>
 

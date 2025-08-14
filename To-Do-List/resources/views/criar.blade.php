@@ -6,12 +6,12 @@
 </head>
 <header>
     <div>
-        <a>Cadastrar nova Tarefa</a>
+        <h1>Cadastrar nova Tarefa</h1>
     </div>
 </header>
 <body>
     <div>
-        <form action="  /criar-tarefa" method="POST">
+        <form action="/criar-tarefa" method="POST">
             @csrf
             <input name="titulo" type="text" placeholder="Nome">
             <input name="descrição" type="text" placeholder="Descrição">
