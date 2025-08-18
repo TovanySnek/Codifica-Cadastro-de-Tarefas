@@ -27,9 +27,14 @@ Fazer migration:
 
 - php artisan migrate
 
+Node:
+
+- npm install
+
+- npm run dev
+
 Abrir Projeto:
 
 - php artisan serve
 
 
-- npm install

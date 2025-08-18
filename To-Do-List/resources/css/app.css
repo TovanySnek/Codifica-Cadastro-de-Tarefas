@@ -18,10 +18,139 @@
 
 }
 body{
-    height: 100vh;
+    height: auto;
     width: 100vw;
     box-sizing: border-box;
     background-color: #000000;
     color: #fcc2f4; 
 
+
+}
+
+h1{
+
+    text-align: center;
+    font-size: 3em;
+
+}
+
+h2{
+
+    font-size: 1.2em;
+}
+
+.conteudo{
+    padding: 5px;
+    border: 1px solid whitesmoke ;
+    margin: 4%;
+    
+}
+
+.busca{
+    padding : 1.5%;
+    border-bottom: 1px solid whitesmoke;
+}
+
+input[type=text] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+}
+
+input[type=search] {
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    padding: 3px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+input[type=submit] {
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    padding: 3px;
+    background-color: #fcc2f4;
+    color: #000000; 
+}
+
+.tarefas{
+    margin: 0.5rem;
+    padding: 1%;
+    background-color: dimgray;
+    border: 3px solid #fcc2f4; 
+}
+
+.botao_conteudo{
+
+    display: flex;
+    flex-direction: row;
+    padding: 1%;  
+    gap: 1rem;  
+    border-bottom: 1px solid white;
+}
+
+.deletar {
+  background-color: red;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.botao {
+  background-color: #fcc2f4;
+  border: none;
+  border-radius: 0.5rem;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.tarefas_titulo{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1%;
+    border-bottom: 1px solid gray;
+}
+
+.tarefas_descricao{
+
+    margin-left: 0.5rem;
+}
+
+.edicao{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 1%;
+    background-color: dimgray;
+    border: 3px solid #fcc2f4; 
+}
+
+.adcionar{
+    background-color: #fcc2f4;
+    border: none;
+    border-radius: 0.5rem;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 0.5rem;
 }
