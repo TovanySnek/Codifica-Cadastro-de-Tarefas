@@ -12,9 +12,9 @@
         <input name="titulo" type="text" value="{{$tarefa->titulo}}">
         <input name="descrição" type="text" value="{{$tarefa->descrição}}">
         <input name="vencimento" type="date" value="{{$tarefa->vencimento}}">
-        <select name="status" type="enum" value="{{$tarefa->vencimento}}">
+        <select name="status" type="enum" value="{{$tarefa->status}}">
             @foreach($status as $statu)
-                <option value= {{$statu}} selected="">{{$statu}}</option>
+                <option value= {{$statu}} selected="{{$statu}}">{{$statu}}</option>
             @endforeach
         </select>
         <button>Salvar Alterações</button>     

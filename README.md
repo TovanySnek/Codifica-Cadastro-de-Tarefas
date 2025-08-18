@@ -7,4 +7,18 @@ Requisitos:
 - PHP
 - Composer
 - Laravel
-- Node.Js
+- NodeJs
+
+Clonar Repositório:
+
+- git clone https://github.com/TovanySnek/Codifica-Cadastro-de-Tarefas.git
+
+- cd .\Codifica-Cadastro-de-Tarefas\To-Do-List\
+
+Fazer migration:
+
+- php artisan migrate
+
+Abrir Projeto:
+
+- php artisan serve

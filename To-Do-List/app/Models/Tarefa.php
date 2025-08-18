@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Tarefa extends Model
 {
     use HasFactory;
-    protected $fillable = ['titulo', 'descrição', 'vencimento'];
+    protected $fillable = ['titulo', 'descrição', 'vencimento', 'status'];
     public $timestamps = false;
 }
