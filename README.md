@@ -15,6 +15,14 @@ Clonar Repositório:
 
 - cd .\Codifica-Cadastro-de-Tarefas\To-Do-List\
 
+Composer:
+
+- composer update
+
+Env:
+
+- copiar arquivo env.example e renomear somente para env
+
 Fazer migration:
 
 - php artisan migrate
@@ -22,3 +30,6 @@ Fazer migration:
 Abrir Projeto:
 
 - php artisan serve
+
+
+- npm install
